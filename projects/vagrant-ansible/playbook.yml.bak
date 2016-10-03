@@ -1,0 +1,14 @@
+---
+- hosts: all
+  sudo: true
+  tasks:
+  - name: Update apt cache "apt-get update"
+    apt: update_cache=yes
+  - name: Install apache
+    apt: name=apache2 state=present
+  - name: Install JDK 1.7 Runtime
+    apt: pkg=openjdk-7-jdk state=latest install_recommends=yes
+  - name: Install mysql
+    apt: name=mysql-server state=present
+  - name: Install php
+    apt: name=php5 state=present
