@@ -3,6 +3,9 @@
   sudo: true
   vars:
     document_root: /vagrant
+  handlers:
+  - name: reload apache
+    service: name=apache2 state=reloaded
   tasks:
   - name: Update apt cache "apt-get update"
     apt: update_cache=yes
