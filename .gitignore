@@ -1,2 +1,6 @@
 **/.vagrant
 **/*.class
+**/*.old
+**/*.pem
+**/*.p12
+**/*.cer
